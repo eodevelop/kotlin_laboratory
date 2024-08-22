@@ -3,7 +3,10 @@ import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
 fun threadTask() {
-    Thread.sleep(10)
+    var result = 0L
+    for (i in 1..1_000_000) {
+        result += i
+    }
 }
 
 fun measureThreadPerformance() {

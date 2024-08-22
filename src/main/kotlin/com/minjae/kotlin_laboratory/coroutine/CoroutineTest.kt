@@ -3,7 +3,10 @@ package com.minjae.kotlin_laboratory.coroutine
 import kotlinx.coroutines.*
 
 suspend fun coroutineTask() {
-    delay(10)
+    var result = 0L
+    for (i in 1..1_000_000) {
+        result += i
+    }
 }
 
 fun measureCoroutinePerformance() = runBlocking {
